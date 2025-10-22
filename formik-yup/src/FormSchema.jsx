@@ -12,15 +12,5 @@ const FormSchema = yup.object().shape({
     .required('Email is required'),
 });
 
-// Example of how to use it (e.g., in a form submission handler)
-/*
-validationSchema.validate(formData, { abortEarly: false })
-  .then(validData => {
-    // Data is valid, proceed with submission
-  })
-  .catch(errors => {
-    // Data is invalid, handle errors
-  });
-*/
 
 export default FormSchema;
