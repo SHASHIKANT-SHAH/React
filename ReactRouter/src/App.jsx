@@ -14,6 +14,7 @@ import Jeans from './Components/Jeans.jsx'
 import User from './Components/User.jsx'
 import UserDetails from './Components/UserDetails.jsx'
 import Settings from './Components/Settings.jsx'
+import Search from './Components/Search.jsx'
 
 function App() {
 const navigate = useNavigate();
@@ -30,6 +31,7 @@ const navigate = useNavigate();
      <Route path="/about" element={<About />} />
      <Route path="/contact" element={<Contact />} />
      <Route path="*" element={<PageNotFound />} />
+     <Route path='/search' element={<Search />} />
      <Route path='/user' element={<User/>} />
      <Route path='/user/:id' element={<UserDetails/>} />
      <Route path='/user/settings' element={<Settings/>} />

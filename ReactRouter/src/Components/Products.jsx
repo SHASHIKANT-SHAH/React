@@ -6,8 +6,8 @@ function Products() {
       <h1>Products Page</h1>
       <p>Welcome to the Products page. Here you can find our product listings.</p>
       <nav>
-        <Link to="shirt">Shirt</Link> |
-        <Link to="jeans">Jeans</Link>
+        <Link to="/products/shirt">Shirt</Link> |
+        <Link to="/products/jeans">Jeans</Link>
       </nav>
       <Outlet />
     </div>
