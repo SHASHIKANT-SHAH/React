@@ -1,27 +1,48 @@
-# Node modules
+# Node.js dependencies
+# सभी node_modules फ़ोल्डर को इग्नोर करता है, चाहे वह कितनी भी गहराई में हो।
 node_modules/
+**/node_modules/
 
 # Build artifacts
+# सभी प्रोजेक्ट्स के build फ़ोल्डर को इग्नोर करता है।
 build/
 dist/
+
+# Configuration and environment files
+# संवेदनशील जानकारी वाले .env फ़ाइलों को इग्नोर करता है।
 .env
+.env.*.local
 
 # Logs
+# NPM और Yarn द्वारा बनाए गए लॉग फ़ाइलों को इग्नोर करता है।
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Editor directories and files
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
 # OS generated files
+# Windows, macOS और अन्य ऑपरेटिंग सिस्टम द्वारा बनाई गई फ़ाइलें।
 .DS_Store
 Thumbs.db
 
-# Optional: If you have separate build folders within each project
-# Example for a project named 'my-react-app-1'
-# my-react-app-1/build/
-# my-react-app-2/build/
+# IDE and Editor-specific files
+# आपके कोड एडिटर द्वारा बनाई गई कॉन्फ़िगरेशन फ़ाइलों को इग्नोर करता है।
+.vscode/
+.idea/
+
+# Miscellaneous
+# अन्य सामान्य अनावश्यक फ़ाइलें
+.cache/
+.docker/
+.pnp.js
+.pnp
+.cache/pkg/53421e0993e4c51193b4799f0ebdead9968d37a7a3bd58e95ae791e75b4b02ea/crypt32.node
+.cache/pkg/b4a58d952e26847dd0ad582b03f37367d4bed18aed22a5ca9320380fe457aaf5/node_sqlite3.node
+.docker/bin/inference/.llamacpp_version
+.docker/bin/inference/com.docker.llama-server.exe
+.docker/bin/inference/com.docker.nv-gpu-info.exe
+.docker/bin/inference/ggml-base.dll
+.docker/bin/inference/ggml-cpu-alderlake.dll
+.docker/bin/inference/ggml-cpu-haswell.dll
+.docker/bin/inference/ggml-cpu-haswell.dll
+*.node
+/.cache

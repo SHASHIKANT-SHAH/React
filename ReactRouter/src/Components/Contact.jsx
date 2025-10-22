@@ -1,3 +1,5 @@
+import { use } from "react";
+
 function Contact() {
   return (
     <div>
