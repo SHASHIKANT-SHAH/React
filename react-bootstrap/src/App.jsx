@@ -4,14 +4,18 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import FirstComponent from './FirstComponent.jsx'
 import SecondComponent from './SecondComponent.jsx'
+import Image from './Image.jsx'
+import CardBS from './CardBS.jsx'
 
 
 function App() {
 
   return (
     <div>
-      <SecondComponent />
-    <FirstComponent />
+      <CardBS />
+      {/* <SecondComponent />
+      <Image />
+    <FirstComponent /> */}
     </div>
   )
 }
