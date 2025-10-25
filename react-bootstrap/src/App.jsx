@@ -10,6 +10,7 @@ import AppNavbar from './components/NavBar/AppNavbar.jsx'
 import FooterModern from './components/Footer/FooterModern.jsx'
 import ProductCatalog from './components/Pages/ProductCatalog.jsx'
 import ReactCarouselExample from './ReactCarouselExample.jsx'
+import Banners from './components/Carousel/Banners.jsx'
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
      <div className="d-flex flex-column min-vh-100">
       <AppNavbar />
       <main className="flex-grow-1 p-4">
-        <ReactCarouselExample />
+        <Banners />
         <ProductCatalog />
         {/* <ReactFirstComponent />
         <ReactGridExample />
