@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 const baseurl = "https://jsonplaceholder.typicode.com/posts/1"
 const baseurl1 = "https://jsonplaceholder.typicode.com/posts"
-function Axiosget() {
+function GetAxios() {
     const [my_data,setData] = useState([])
     const [posts,setPosts] = useState([])
     useEffect(()=>{
@@ -37,4 +37,4 @@ function Axiosget() {
     )
 }
 
-export default Axiosget;
+export default GetAxios;
