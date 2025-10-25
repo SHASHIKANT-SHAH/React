@@ -9,6 +9,7 @@ import ReactCardExample from './ReactCardExample.jsx'
 import AppNavbar from './components/NavBar/AppNavbar.jsx'
 import FooterModern from './components/Footer/FooterModern.jsx'
 import ProductCatalog from './components/Pages/ProductCatalog.jsx'
+import ReactCarouselExample from './ReactCarouselExample.jsx'
 
 
 function App() {
@@ -17,8 +18,7 @@ function App() {
      <div className="d-flex flex-column min-vh-100">
       <AppNavbar />
       <main className="flex-grow-1 p-4">
-        <h1>Welcome to Stitch Studio</h1>
-        <p>Beautiful design with Glass + Gradient modes.</p>
+        <ReactCarouselExample />
         <ProductCatalog />
         {/* <ReactFirstComponent />
         <ReactGridExample />
