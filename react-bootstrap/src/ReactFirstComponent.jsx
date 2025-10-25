@@ -1,7 +1,7 @@
 import { Alert, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export default function FirstComponent() {
+export default function ReactFirstComponent() {
   return (
     <div>
     <Button variant="danger" size='lg'>React Bootstrap Button</Button>
