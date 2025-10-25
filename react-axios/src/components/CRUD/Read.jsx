@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Button, Spinner,Alert } from 'react-bootstrap';
 import Axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const API_URL = 'https://68fcdcec96f6ff19b9f68617.mockapi.io/crud';
 function Read(){
 
     const [userData, setUserData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
   const fetchUsers = async () => {
     setLoading(true);
@@ -28,9 +29,15 @@ function Read(){
   }, []); // The empty dependency array [] ensures this runs only on mount
 
   // --- Placeholder Handler Functions (for future CRUD operations) ---
-  const handleEdit = (id) => {
-    alert(`Editing user with ID: ${id}`);
+  const handleEdit = (id,name,age,email) => {
+    //alert(`Editing user with ID: ${id}`);
     // Real logic to navigate or open a modal
+    localStorage.setItem('id',id)
+    localStorage.setItem('name',name)
+    localStorage.setItem('age',age)
+    localStorage.setItem('email',email)
+    navigate('/edit');
+
   };
 
   const handleDelete = async (id) => {
@@ -95,7 +102,7 @@ return (
                   <Button 
                     variant="warning" 
                     size="sm" 
-                    onClick={() => handleEdit(user.id)}
+                    onClick={() => handleEdit(user.id,user.name,user.age,user.email)}
                   >
                     Edit ✏️
                   </Button>

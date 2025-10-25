@@ -10,6 +10,7 @@ import { Container } from 'react-bootstrap'
 import Read from './components/CRUD/Read'
 import Create from './components/CRUD/Create'
 import { Routes,Route } from 'react-router-dom'
+import Edit from './components/CRUD/Edit'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Read />}></Route>
         <Route path='/create' element={<Create />}></Route>
+        <Route path='/edit' element={<Edit />}></Route>
       </Routes>
     </Container>
     // <>
