@@ -1,0 +1,42 @@
+.mealForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.mealForm div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.mealForm form {
+    text-align: right;
+}
+.mealForm label {
+    font-weight: bold;
+    margin-right: 1rem;
+}
+.mealForm input {
+    width: 3rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding-left: 0.5rem;
+}
+.mealForm button {
+    font: inherit;
+    cursor: pointer;
+    background-color: #8a2b0c;
+    border: 1px solid #8a2b0c;
+    color: white;
+    padding: 0.25rem 2rem;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 250ms ease-out;
+    margin-top: 0.5rem;
+}
+.mealForm button:hover,
+.mealForm button:active {
+    background-color: #641e03;
+    border-color: #641e03;
+}

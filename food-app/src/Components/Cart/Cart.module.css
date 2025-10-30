@@ -1,0 +1,64 @@
+/* Cart.module.css */
+
+/* --- Item List Container (ul) --- */
+.cart-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 20rem; /* Scrollable if too many items */
+    overflow: auto;
+}
+
+/* --- Total Amount Section (div.total) --- */
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+/* --- Action Buttons Container (div.actions) --- */
+.actions {
+    text-align: right;
+}
+
+/* --- General Button Styling (Common to both) --- */
+.actions button{
+    font: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #8a2b06;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+    transition: background-color 250ms, color 250ms;
+}
+
+/* --- 1. Secondary Button: 'Close' (button--alt) --- */
+.actions .button--alt {
+    color: #8a2b06; /* Text color is the brand color */
+}
+
+/* --- 2. Primary Button: 'Order' (button) --- */
+.actions .button {
+    background-color: #8a2b06;
+    color: white; /* Filled with brand color */
+}
+
+/* --- Hover/Active Effects --- */
+
+/* Hover/Active for Primary Button ('Order') */
+.actions .button:hover,
+.actions .button:active {
+    background-color: #5a1a01; /* Darker fill on hover */
+    border-color: #5a1a01;
+}
+
+/* Hover/Active for Secondary Button ('Close') */
+.actions .button--alt:hover,
+.actions .button--alt:active {
+    background-color: #f0e6e6; /* Light background wash on hover */
+    color: #8a2b06;
+}

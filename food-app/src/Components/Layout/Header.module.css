@@ -14,8 +14,20 @@
     z-index: 10;
 }
 
-.header .logoText{
-padding-left: 10%;
+.logoText{
+margin-left: -800px;
+font-size: 20px;
+font-weight: bold;
+}
+
+.logoImage {
+    /* Ensures 10% spacing from the left edge */
+    padding-left: 10%; 
+    /* Image size constraints */
+    max-height: 4rem; /* Prevents image from being taller than header */
+    height: 100%; /* Use available height */
+    width: auto;
+    object-fit: contain;
 }
 
 .header .cartButtonContainer {
