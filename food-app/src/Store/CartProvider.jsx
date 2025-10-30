@@ -42,7 +42,45 @@ const cartReducer = (state, action) => {
             totalAmount: updatedTotalAmount,
         };
     }
-    // REMOVE लॉजिक यहाँ आएगा...
+    // अगर एक्शन 'REMOVE' है (यानी कोई आइटम जोड़ना है) 
+    if (action.type === 'REMOVE') {
+        // 1. आइटम ढूंढना
+        const existingCartItemIndex = state.items.findIndex(
+            (item) => item.id === action.id // action.id वह ID है जिसे हमें हटाना है।
+        );
+        const existingItem = state.items[existingCartItemIndex];
+
+        // 2. नया टोटल अमाउंट कैलकुलेट करना
+        const updatedTotalAmount = state.totalAmount - existingItem.price;
+        
+        let updatedItems;
+
+        // केस A: आइटम की मात्रा (quantity) 1 है (इसे पूरी तरह से हटाना है)
+        if (existingItem.quantity === 1) {
+            // filter() का उपयोग करके उस आइटम को array से हटा दिया जाता है।
+            updatedItems = state.items.filter(item => item.id !== action.id);
+        } 
+        // केस B: आइटम की मात्रा 1 से ज़्यादा है (केवल मात्रा घटानी है)
+        else {
+            // 3. मात्रा 1 से घटाना
+            const updatedItem = { 
+                ...existingItem, 
+                quantity: existingItem.quantity - 1 
+            };
+            
+            // 4. नया आइटम्स array बनाना
+            updatedItems = [...state.items];
+            updatedItems[existingCartItemIndex] = updatedItem; // array में अपडेटेड आइटम डालो
+        }
+
+        // 5. नया स्टेट वापस करना
+        // Math.abs का उपयोग यह सुनिश्चित करने के लिए किया गया है कि totalAmount कभी नेगेटिव न हो (0 से कम न हो)।
+        return {
+            items: updatedItems,
+            totalAmount: Math.abs(updatedTotalAmount), 
+        };
+    }
+
     return defaultCartState;
 };
 

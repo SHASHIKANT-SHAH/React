@@ -1,0 +1,74 @@
+/* Cart Item Container */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #8a2b06;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.cart-item h2 {
+    margin: 0 0 0.5rem 0;
+    color: #363636;
+}
+
+/* Item details container (Price and Quantity) */
+.summary {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: bold;
+    color: #8a2b06;
+}
+
+/* Quantity Badge */
+.quantity {
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 0.25rem 0.75rem; /* Fix: Added missing semicolon */
+    border-radius: 6px; /* Added rounded corners for better aesthetics */
+    color: #363636;
+}
+
+/* Actions Container (NEW) */
+.actions {
+    display: flex;
+    flex-direction: column; /* Mobile-first: buttons stacked */
+    align-items: flex-end; /* Align buttons to the right side of the list item */
+    margin-left: 1rem;
+}
+
+/* Adjust button layout for larger screens */
+@media (min-width: 768px) {
+    .actions {
+        flex-direction: row; /* Desktop: buttons in a row */
+    }
+}
+
+/* Individual Buttons (NEW) */
+.actions button {
+    font: inherit;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #8a2b06; /* Primary brand color */
+    border: 1px solid #8a2b06;
+    width: 3rem;
+    text-align: center;
+    border-radius: 6px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Hover/Active effects */
+.actions button:hover,
+.actions button:active {
+    background-color: #8a2b06;
+    color: white; /* Text turns white on hover */
+}
