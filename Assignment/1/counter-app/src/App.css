@@ -1,0 +1,27 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+  min-height: 100vh;
+}
+
+.main-heading {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.counter-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.counter-box {
+  display: flex;
+  justify-content: center;
+}
