@@ -50,6 +50,7 @@ const TodoApp = () => {
         ) : (
           todos.map((todo) => (
             <li key={todo.id} className="todo-item">
+              <span className="todo-text">{todo.completed ? "Completed" : ""}</span>
               <input
                 type="checkbox"
                 checked={todo.completed}
@@ -60,8 +61,9 @@ const TodoApp = () => {
                   todo.completed ? "completed" : ""
                 }`}
               >
-                {todo.title}
+                {todo.title} 
               </span>
+              
             </li>
           ))
         )}
