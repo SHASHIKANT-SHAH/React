@@ -1,0 +1,120 @@
+/* 🎨 Reset and base setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+  padding: 40px;
+  display: block; /* or simply remove display:flex */
+}
+
+
+
+/* 🌈 Layout */
+.container {
+  display: flex;
+  gap: 30px;
+  /* width: 90%;
+  max-width: 1200px; */
+}
+
+/* 👟 Shoe List Section */
+.shoe-list {
+  flex: 1;
+}
+
+.shoe-list h2 {
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.shoe-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.shoe-item:hover {
+  transform: translateY(-4px);
+}
+
+.shoe-item img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.shoe-details {
+  flex: 1;
+}
+
+.shoe-details h4 {
+  margin-bottom: 5px;
+}
+
+.price {
+  font-weight: 600;
+  color: #16a34a;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* 🛒 Cart Section */
+.cart {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  flex-direction: row;
+  border-bottom: 1px solid #e5e7eb;
+  
+}
+
+.cart-item strong {
+  color: #111827;
+}
+
+.total {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 15px;
+  text-align: right;
+  color: #16a34a;
+}
