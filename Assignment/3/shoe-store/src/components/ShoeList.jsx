@@ -21,7 +21,7 @@ const shoes = [
 function ShoeList({ onAddToCart }) {
   return (
     <div className="shoe-list">
-      <h2>👟 Available Shoes</h2>
+      <h2>{'\u{1F45F}'} Available Shoes</h2>
       {shoes.map((shoe) => (
         <div key={shoe.id} className="shoe-item">
           <img src={shoe.image} alt={shoe.name} />

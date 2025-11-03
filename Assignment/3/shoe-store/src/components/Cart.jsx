@@ -6,7 +6,7 @@ function Cart({ cartItems, onRemove, onAdd }) {
 
   return (
     <div className="cart">
-      <h2>🛒 Shopping Cart</h2>
+      <h2>{'\u{1F6D2}'} Shopping Cart</h2>
       {cartItems.length === 0 ? (
         <p>No items in cart</p>
       ) : (
