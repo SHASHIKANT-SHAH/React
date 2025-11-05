@@ -1,6 +1,9 @@
 body{
   margin: 0px;
 }
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
 
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

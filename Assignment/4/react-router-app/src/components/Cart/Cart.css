@@ -1,0 +1,32 @@
+.cart {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  flex-direction: row;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cart-item strong {
+  color: #111827;
+}
+
+.total {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 15px;
+  text-align: right;
+  color: #16a34a;
+}

@@ -31,7 +31,11 @@ function App() {
   return (
     <div className="container">
       <ShoeList onAddToCart={handleAddToCart} />
-      <Cart cartItems={cart} onRemove={handleRemoveFromCart} onAdd={handleAddToCart} />
+      <Cart
+        cartItems={cart}
+        onRemove={handleRemoveFromCart}
+        onAdd={handleAddToCart}
+      />
     </div>
   );
 }
