@@ -7,7 +7,7 @@ const TodoApp = () => {
 
   const handleAddTodo = () => {
     if (task.trim() === "") {
-      alert("⚠️ Please enter a task before adding!");
+      alert("\u26A0\uFE0F Please enter a task before adding!");
       return;
     }
 
@@ -18,7 +18,7 @@ const TodoApp = () => {
     };
 
     setTodos([...todos, newTodo]);
-    alert("✅ Task added successfully!");
+    alert("\u2705 Task added successfully!");
     setTask("");
   };
 
@@ -50,20 +50,19 @@ const TodoApp = () => {
         ) : (
           todos.map((todo) => (
             <li key={todo.id} className="todo-item">
-              <span className="todo-text">{todo.completed ? "Completed" : ""}</span>
+              <span className="todo-text">
+                {todo.completed ? "Completed" : ""}
+              </span>
               <input
                 type="checkbox"
                 checked={todo.completed}
                 onChange={() => handleToggleComplete(todo.id)}
               />
               <span
-                className={`todo-text ${
-                  todo.completed ? "completed" : ""
-                }`}
+                className={`todo-text ${todo.completed ? "completed" : ""}`}
               >
-                {todo.title} 
+                {todo.title}
               </span>
-              
             </li>
           ))
         )}
