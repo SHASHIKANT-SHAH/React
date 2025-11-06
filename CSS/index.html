@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        display: flex;
+        align-items: flex-start;
+      }
+      .item {
+        background: #000;
+        color: #fff;
+        border: 5px solid red;
+        flex: 1;
+        text-align: center;
+      }
+      /* Example 1: Simple neeche-right wala shadow */
+      .box1 {
+        /* 10px right, 10px neeche, 5px blur, halka kala rang */
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Example 2: Andar ki taraf (inset) shadow */
+      .box2 {
+        /* 5px right, 5px neeche, 10px blur, 2px spread, andar ki taraf */
+        box-shadow: inset 5px 5px 10px 2px #888;
+      }
+
+      /* Example 3: Card jaisa effect (sirf neeche) */
+      .card {
+        /* X-axis par 0, Y-axis par 4px neeche, 12px blur, halka shadow */
+        box-shadow: 10px 10px 12px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Example 1: Element ko 50px right aur 20px neeche khiskana */
+      .box1 {
+        transform: translate(50px, 20px);
+      }
+
+      /* Example 2: Element ko sirf 100px right khiskana */
+      .box2 {
+        transform: translateX(100px);
+      }
+
+      /* Example 3: Hover karne par element ko thoda upar uthana */
+      .icon:hover {
+        /* -10px upar ki taraf */
+        transform: translateY(-10px);
+        /* Dheere se move hone ke liye transition */
+        transition: transform 0.3s ease;
+      }
+
+      /* Example 4: Element ko uski khud ki width ka 50% left mein khiskana */
+      .box4 {
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <label>Box 1</label>
+        <input type="text" value="Sample Text" />
+      </div>
+      <div class="item">
+        <label>Box 2</label> <input type="text" value="Sample Text" />
+      </div>
+      <div class="item">
+        <label>Box 3</label> <input type="text" value="Sample Text" />
+      </div>
+    </div>
+    <div style="width: 600px; text-align: center">
+      <div class="box1">
+        <label>Box 1</label>
+        <input type="text" value="Sample Text" />
+      </div>
+      <div class="box2">
+        <label>Box 2</label> <input type="text" value="Sample Text" />
+      </div>
+      <div class="card">
+        <label>Box 3</label> <input type="text" value="Sample Text" />
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- 1. justify-content (Main Axis par alignment)
+Yeh items ko Main Axis (default mein, horizontal) par align karta hai.
+
+flex-start: Shuru mein (default).
+
+center: Beech mein.
+
+flex-end: Aakhir mein.
+
+space-between: Items ke beech mein barabar space (pehla aur aakhri item kone mein chipke hue).
+
+space-around: Items ke dono taraf barabar space.
+
+space-evenly: Sabke beech mein bilkul barabar space.
+
+2. align-items (Cross Axis par alignment)
+Yeh items ko Cross Axis (default mein, vertical) par align karta hai.
+
+stretch: (Default) Items ko poori height lene ke liye stretch karta hai.
+
+flex-start: Cross axis ke shuru mein (upar).
+
+center: Cross axis ke beech mein (vertically centered).
+
+flex-end: Cross axis ke aakhir mein (neeche).
+
+3. flex-direction (Disha badalna)
+Isse aap Main Axis ki disha badal sakte hain.
+
+row: (Default) Items horizontal (left-to-right) chalenge.
+
+column: Items vertical (top-to-bottom) chalenge.
+
+Important: Jab aap column karte hain, toh justify-content vertical alignment (↕️) aur align-items horizontal alignment (↔️) control karne lagta hai. (Kyunki Main Axis ab vertical ho gaya hai).
+
+4. flex-wrap (Line todna)
+Agar items ke liye container mein jagah kam pad jaaye toh kya ho?
+
+nowrap: (Default) Sabko ek hi line mein rakhega, bhale hi woh sikud (shrink) jaayein.
+
+wrap: Agar jagah na ho toh items ko agli line (next row) mein bhej dega. -->
